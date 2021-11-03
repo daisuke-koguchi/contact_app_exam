@@ -7,7 +7,11 @@ class PostsController < ApplicationController
   end
   def create
     @post = Post.create(post_params)
-    redirect_to new_post_path
+    if @post.save
+      redirect_to posts_path, notice: "メモを作成しました！"
+    else
+      render :new
+    end
   end
   def show
     @post = Post.find(params[:id])
