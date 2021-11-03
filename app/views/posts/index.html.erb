@@ -1,0 +1,12 @@
+<table>
+  <tr>
+    <th>メモ内容</th>
+  </tr>
+  <% @posts.each do |post| %>
+  <tr>
+    <td><%= post.content %></td>
+    <td><%= link_to '詳細画面へ', post_path(post.id) %></td>
+  </tr>
+<% end %>
+</table>
+<%= link_to 'メモ作成画面へリンクする', new_post_path %>
