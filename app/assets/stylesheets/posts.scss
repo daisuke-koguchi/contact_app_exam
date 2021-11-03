@@ -1,3 +1,80 @@
-// Place all the styles related to the posts controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: https://sass-lang.com/
+html {
+  position: relative;
+  min-height: 100%;
+}
+body {
+  text-align: center;
+
+}
+li {
+  list-style: none;
+}
+ul {
+  margin:0;
+  padding:0;
+}
+header{
+  height: 54px;
+  width: 100%;
+  background-color: rgb(10, 87, 68)
+}
+header p {
+  padding:15px;
+  color:white;
+}
+header li {
+  float: left;
+  padding: 15px;
+}
+header li:hover {
+  opacity: 0.5;
+}
+header ul:after{
+  content: "";
+  display: block;
+  clear: both;
+}
+header li a {
+  text-decoration: none;
+  color:white;
+  display: block;
+}
+header li a:hover{
+  color: white;
+  text-decoration: none;
+  display: block;
+}
+footer{
+  position:absolute;
+  bottom: 0;
+  height: 100px;
+  width: 100%;
+  background-color:rgb(10, 87, 68);
+}
+footer li{
+  margin-left: 15px;
+  padding: 15px;
+  color:white;
+  float:left
+}
+footer ul:after{
+  content: "";
+  display: block;
+  clear:both;
+}
+footer ul li:hover{
+  opacity: 0.5;
+}
+footer li a{
+  color: white;
+  text-decoration: none;
+  display: block;
+}
+footer li a:hover{
+  color: white;
+  text-decoration: none;
+}
+footer p{
+  color:white;
+  text-align: center;
+}

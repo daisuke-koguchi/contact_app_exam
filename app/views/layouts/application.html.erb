@@ -1,15 +1,37 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>ContactAppExam</title>
+    <title>日々の日記アプリ</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
+    <meta name="viewport" content="width=device-width">
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
-
   <body>
+    <header> 
+      <div class="row">
+        <div class="col-md-6">
+        <p >日々の日記アプリ</p>
+        </div>
+        <div class="col-md-6">
+          <ul class="row">
+            <li class="offset-6 col-md-2"><a href ="#">お知らせ</a></li>
+            <li class="col-md-2"><a href ="#">閲覧履歴</a></li>
+            <li class="col-md-2"><a href ="#">お気に入り</a></li>
+          </ul>
+        </div>
+      </div>
+    </header>
     <%= yield %>
   </body>
+  <footer>
+    <div>
+      <ul class="row">
+        <li><a href="#">会社概要</a></li>
+        <li><a href="#">採用情報</a></li>
+      </ul>
+    </div>
+    <p>Copyright © 2021 DIVE INTO CODE All RIGHT RESERVED.</p>
+  </footer>
 </html>
