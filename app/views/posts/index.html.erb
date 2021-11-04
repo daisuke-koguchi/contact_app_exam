@@ -1,16 +1,23 @@
 <h1>メモ一覧</h1>
 <p><%= notice %></p>
-<table>
+<table class="table">
+ <thead>
   <tr>
-    <th>メモ内容</th>
+    <th style="width: 70%">メモ内容</th>
+    <th style="width: 10%">詳細</th>
+    <th style="width: 10%">編集</th>
+    <th style="width: 10%">削除</th>
   </tr>
-  <% @posts.each do |post| %>
-  <tr>
-    <td><%= post.content %></td>
-    <td><%= link_to '詳細画面へ', post_path(post.id) %></td>
-    <td><%= link_to '編集画面へ', edit_post_path(post.id), data: {confirm: "本当に編集しますか？"} %></td>
-    <td><%= link_to '削除する', post_path(post.id), method: :delete, data: {confirm: '本当に削除していいですか？'} %></td>
-  </tr>
-<% end %>
+  <thead>
+    <% @posts.each do |post| %>
+  <tbody>
+    <tr>
+      <td><%= post.content %></td>
+      <td><%= link_to '詳細画面へ', post_path(post.id) %></td>
+      <td><%= link_to '編集画面へ', edit_post_path(post.id), data: {confirm: "本当に編集しますか？"} %></td>
+      <td><%= link_to '削除する', post_path(post.id), method: :delete, data: {confirm: '本当に削除していいですか？'} %></td>
+    </tr>
+    <% end %>
+  </tbody>
 </table>
 <%= link_to 'メモ作成画面へリンクする', new_post_path %>

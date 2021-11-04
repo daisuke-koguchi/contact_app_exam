@@ -11,8 +11,8 @@ class PostsController < ApplicationController
     render :new if @post.invalid?
   end
   def create
-    @post = Post.create(post_params)
-   if params[:name]
+    @post = Post.new(post_params)
+   if params[:back]
     render :new
    else
     if @post.save
@@ -27,11 +27,11 @@ class PostsController < ApplicationController
   def edit
   end
   def update
-      if @post.update(post_params)    
-        redirect_to posts_path, notice: "メモを編集しました！"
-      else
-        render :edit
-      end
+    if @post.update(post_params)    
+      redirect_to posts_path, notice: "メモを編集しました！"
+    else
+      render :edit
+    end
   end
   def destroy
     @post.destroy

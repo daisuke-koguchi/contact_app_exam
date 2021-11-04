@@ -1,8 +1,8 @@
 module PostsHelper
   def confirm_or_edit
-    if action_name == "new" || action_name == "create"
+    if action_name == 'new' || action_name == 'create'
       confirm_posts_path
-    elsif action_name == "edit"
+    elsif action_name == 'edit'
       post_path
     end
   end 
