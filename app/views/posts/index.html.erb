@@ -6,7 +6,8 @@
   <tr>
     <td><%= post.content %></td>
     <td><%= link_to '詳細画面へ', post_path(post.id) %></td>
-    <td><%= link_to '編集画面へ', edit_post_path(post.id)%></td>
+    <td><%= link_to '編集画面へ', edit_post_path(post.id) %></td>
+    <td><%= link_to '削除する', post_path(post.id), method: :delete %></td>
   </tr>
 <% end %>
 </table>
