@@ -1,3 +1,5 @@
+<h1>メモ一覧</h1>
+<p><%= notice %></p>
 <table>
   <tr>
     <th>メモ内容</th>
@@ -6,8 +8,8 @@
   <tr>
     <td><%= post.content %></td>
     <td><%= link_to '詳細画面へ', post_path(post.id) %></td>
-    <td><%= link_to '編集画面へ', edit_post_path(post.id) %></td>
-    <td><%= link_to '削除する', post_path(post.id), method: :delete %></td>
+    <td><%= link_to '編集画面へ', edit_post_path(post.id), data: {confirm: "本当に編集しますか？"} %></td>
+    <td><%= link_to '削除する', post_path(post.id), method: :delete, data: {confirm: '本当に削除していいですか？'} %></td>
   </tr>
 <% end %>
 </table>
