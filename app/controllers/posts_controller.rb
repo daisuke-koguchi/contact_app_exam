@@ -6,13 +6,21 @@ class PostsController < ApplicationController
   def new
     @post = Post.new
   end
+  def confirm
+    @post = Post.new(post_params)
+    render :new if @post.invalid?
+  end
   def create
     @post = Post.create(post_params)
+   if params[:name]
+    render :new
+   else
     if @post.save
       redirect_to posts_path, notice: "メモを作成しました！"
     else
       render :new
     end
+   end
   end
   def show
   end
